@@ -1,5 +1,8 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/golang:latest as builder
-LABEL mytest="ado"
+
+LABEL com.example.project="ado" \
+      version="1.0.0" 
+    
 WORKDIR /build
 ADD . /build/
 
